@@ -4,6 +4,8 @@
 
 (require 'package)
 
+(load-theme 'tango-dark)
+
 (add-to-list 'package-archives
              '("melpa-stable" . "https://stable.melpa.org/packages/"))
 
@@ -17,24 +19,10 @@
 
 (neotree-toggle)
 
-(elpy-enable)
-
 (eyebrowse-mode t)
 
 (setq multi-term-program "/bin/zsh")
 
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(custom-enabled-themes (quote (misterioso))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
 (require 'projectile)
 (projectile-mode)
 (setq projectile-completion-system 'default)
@@ -42,6 +30,6 @@
 (require 'ox-md)
 (setq org-todo-keywords '((sequence "TODO(t)" "WAITING(w)" "|" "DONE(d)" "CANCELLED(c)")))
 
-
 (require 'server)
-(unless (server-running-p) (server-start)))
+(unless (server-running-p) (server-start))
+

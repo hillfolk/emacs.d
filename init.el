@@ -43,6 +43,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(custom-enabled-themes (quote (misterioso)))
  '(package-selected-packages
    (quote
     (go-autocomplete auto-complete exec-path-from-shell gorepl-mode which-key wgrep org-kanban neotree multi-term magit go-mode flycheck eyebrowse elpy counsel-projectile)))

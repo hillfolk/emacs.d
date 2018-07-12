@@ -3,6 +3,8 @@
 (setq initial-scratch-message nil)
 
 (require 'package)
+(set-language-environment "Korean")
+(prefer-coding-system 'utf-8)
 
 (load-theme 'tango-dark)
 

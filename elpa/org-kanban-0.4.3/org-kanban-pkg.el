@@ -1,1 +1,0 @@
-(define-package "org-kanban" "0.4.3" "kanban dynamic block for org-mode." '((dash "2.13.0") (emacs "24.4")) :commit "e391db5c4db31b23d542fe31b4e93a7fc8712d86" :keywords '("org-mode" "org" "kanban" "tools") :url "http://github.com/gizmomogwai/org-kanban")

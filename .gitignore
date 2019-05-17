@@ -49,3 +49,5 @@ session.*
 *.el~
 
 
+elpa/
+*.eld

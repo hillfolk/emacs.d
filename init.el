@@ -10,11 +10,11 @@
 
 (add-to-list 'package-archives
              '("melpa-stable" . "https://stable.melpa.org/packages/"))
+(require 'package)
+(add-to-list 'package-archives '("org" . "https://orgmode.org/elpa/"))
 
 (package-initialize)
 (package-refresh-contents)
-
-(add-to-list 'load-path "/home/hillfolk/.emacs.d/packages/neotree")
 
 (require 'neotree)
 
@@ -24,7 +24,11 @@
 
 (eyebrowse-mode t)
 
+(setq latex-run-command "pdflatex")
+
 (setq multi-term-program "/bin/zsh")
+
+(require 'org-tree-slide)
 
 (require 'projectile)
 (projectile-mode)
@@ -37,6 +41,13 @@
 (require 'ox-md)
 (setq org-todo-keywords '((sequence "TODO(t)" "WAITING(w)" "|" "DONE(d)" "CANCELLED(c)")))
 
+(with-eval-after-load 'ox
+  (require 'ox-hugo))
+
+(use-package ox-hugo
+  :ensure t            ;Auto-install the package from Melpa (optional)
+  :after ox)
+
 (require 'server)
 (unless (server-running-p) (server-start))
 
@@ -48,7 +59,7 @@
  '(custom-enabled-themes (quote (misterioso)))
  '(package-selected-packages
    (quote
-    (go-autocomplete auto-complete exec-path-from-shell gorepl-mode which-key wgrep org-kanban neotree multi-term magit go-mode flycheck eyebrowse elpy counsel-projectile)))
+    (## go-autocomplete auto-complete exec-path-from-shell gorepl-mode which-key wgrep org-kanban neotree multi-term magit go-mode flycheck eyebrowse elpy counsel-projectile)))
  '(tool-bar-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

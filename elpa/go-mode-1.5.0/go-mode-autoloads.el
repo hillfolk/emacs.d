@@ -3,8 +3,8 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "go-mode" "go-mode.el" (23621 52854 387936
-;;;;;;  790000))
+;;;### (autoloads nil "go-mode" "go-mode.el" (23778 29757 840287
+;;;;;;  235000))
 ;;; Generated autoloads from go-mode.el
 
 (autoload 'go-mode "go-mode" "\

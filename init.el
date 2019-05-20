@@ -6,6 +6,10 @@
 (set-language-environment "Korean")
 (prefer-coding-system 'utf-8)
 
+;; High level aesthetic stuff
+(tool-bar-mode -1)                  ; Disable the button bar atop screen
+(scroll-bar-mode -1)                ; Disable scroll bar
+
 (load-theme 'tango-dark)
 
 (add-to-list 'package-archives
@@ -23,6 +27,10 @@
 (neotree-toggle)
 
 (eyebrowse-mode t)
+
+(require 'auto-complete)
+(global-auto-complete-mode t)
+
 
 (setq latex-run-command "pdflatex")
 
@@ -47,6 +55,15 @@
 (use-package ox-hugo
   :ensure t            ;Auto-install the package from Melpa (optional)
   :after ox)
+
+(require 'go-mode)
+
+
+(require 'go-autocomplete)
+(require 'auto-complete-config)
+(ac-config-default)
+
+(global-auto-complete-mode t)
 
 (require 'server)
 (unless (server-running-p) (server-start))

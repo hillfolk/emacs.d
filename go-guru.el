@@ -59,7 +59,14 @@
 
 ;; Ensure the go specific autocomplete is active in go-mode.
 (with-eval-after-load 'go-mode
-   (require 'go-autocomplete))
+  (require 'go-autocomplete))
+
+
+Also you could setup any combination (for example M-TAB)
+for invoking auto-complete:
+
+(require 'auto-complete-config)
+(define-key ac-mode-map (kbd "M-TAB") 'auto-complete)
 
 ;; If the go-guru.el file is in the load path, this will load it.
 (require 'go-guru)

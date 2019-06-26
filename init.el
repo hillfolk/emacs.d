@@ -38,6 +38,11 @@
   (go-set-project))
 (add-hook 'projectile-after-switch-project-hook #'my-switch-project-hook)
 
+(projectile-mode +1)
+(define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
+(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
+
+
 (require 'ox-md)
 (setq org-todo-keywords '((sequence "TODO(t)" "WAITING(w)" "|" "DONE(d)" "CANCELLED(c)")))
 

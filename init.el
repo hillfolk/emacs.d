@@ -8,10 +8,9 @@
 
 (load-theme 'tango-dark)
 
+(add-to-list 'package-archives '("org" . "https://orgmode.org/elpa/"))
 (add-to-list 'package-archives
              '("melpa-stable" . "https://stable.melpa.org/packages/"))
-(require 'package)
-(add-to-list 'package-archives '("org" . "https://orgmode.org/elpa/"))
 
 (package-initialize)
 (package-refresh-contents)
@@ -48,6 +47,8 @@
 
 (with-eval-after-load 'ox
   (require 'ox-hugo))
+
+(require 'use-package)
 
 (use-package ox-hugo
   :ensure t            ;Auto-install the package from Melpa (optional)
